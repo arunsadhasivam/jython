@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from chAPI.dao.EmployeeDAO import search
+from chAPI.controller import LoginController
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    
-     url(r'^chAPI/', search),
+    url(r'^chAPI/', LoginController.registration),
+    url(r'^search/', LoginController.search),
 ]
