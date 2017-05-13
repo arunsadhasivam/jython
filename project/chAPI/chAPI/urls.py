@@ -23,3 +23,4 @@ urlpatterns = [
     url(r'^chAPI/', LoginController.registration),
     url(r'^search/', LoginController.search),
 ]
+ 
