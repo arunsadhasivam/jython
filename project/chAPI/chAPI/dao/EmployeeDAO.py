@@ -17,7 +17,11 @@ def search(employee):
     
     print(empId)
     employees=[];
-    query = "SELECT * FROM employee where empid ="+empId ;
+    if empId!=''  :
+        query = "SELECT * FROM employee where empid ="+empId ;
+    else:
+        query = "SELECT * FROM employee"
+    print(query)
     cursor.execute(query)
    
     employees = dictfetchall(cursor)
