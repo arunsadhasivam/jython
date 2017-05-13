@@ -12,9 +12,13 @@ def search(employee):
     db = sqlite3.connect( database='C:\softwares\sqllite\db\emp.db')
     #db = sqlite3.connect( database='emp')
     cursor = db.cursor()
+    empId = employee.empid;
+    print('empId')
+    
+    print(empId)
     employees=[];
-    query = "SELECT * FROM employee"
-    cursor.execute('SELECT empid,name,employer FROM employee')
+    query = "SELECT * FROM employee where empid ="+empId ;
+    cursor.execute(query)
    
     employees = dictfetchall(cursor)
     db.close() 
