@@ -56,7 +56,7 @@ ROOT_URLCONF = 'chAPI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['chAPI/template'],
+        'DIRS': ['chAPI/view' ,'chAPI/view'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
