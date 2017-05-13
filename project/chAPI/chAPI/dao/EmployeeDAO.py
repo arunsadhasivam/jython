@@ -1,6 +1,5 @@
 import sqlite3
 
-from django.shortcuts import render
 
 from chAPI.model.employeeForm import employee as employee
 
@@ -8,7 +7,7 @@ from chAPI.model.employeeForm import employee as employee
 
 
 
-def search(request):
+def search(employee):
     print('dao')
     db = sqlite3.connect( database='C:\softwares\sqllite\db\emp.db')
     #db = sqlite3.connect( database='emp')
@@ -23,8 +22,9 @@ def search(request):
     #for p in employee.objects.raw('SELECT id, first_name FROM myapp_person'):
     #print(p);
         
+    return employees
 
-    return render(request,  'home.html',{'employees': employees})
+    #return render(request,  'home.html',{'employees': employees})
 
 
 
